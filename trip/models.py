@@ -36,6 +36,7 @@ class Note(models.Model):
     description = models.TextField()
     type = models.CharField(max_length = 100, choices = EXCURSIONS)
     img = models.ImageField(upload_to='notes', blank = True, null = True)
+    #pillow is used to process and handle images
     rating = models.PositiveSmallIntegerField(default = 1, validators = [MaxValueValidator(5)])
 
     def __str__(self):
