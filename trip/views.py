@@ -9,6 +9,6 @@ class HomeView(TemplateView):
 def trips_list(request):
     trips = Trip.objects.all()
     context = {
-        'trip': trips
+        'trips': trips
     }
     return render(request, 'trip/trip_list.html', context)

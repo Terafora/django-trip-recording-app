@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    #3rd party
+
+
+
     # local apps
 
     'trip',
@@ -59,7 +63,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -129,3 +133,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = '/media/' # this is where the image will show on site
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/') # path to directory
+
+#where user should go after login - if not next
+
+LOGIN_REDIRECT_URL = 'trip-list'
