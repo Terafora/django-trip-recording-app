@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     #3rd party
 
-
+    "crispy_forms",
+    "crispy_tailwind",
 
     # local apps
 
@@ -137,3 +138,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/') # path to directory
 #where user should go after login - if not next
 
 LOGIN_REDIRECT_URL = 'trip-list'
+
+#crispy tailwind
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
