@@ -25,7 +25,7 @@ class Note(models.Model):
     EXCURSIONS = (
         ("event", "Event"),
         ("dining", "Dining"),
-        ("ecperience", "Experience"),
+        ("experience", "Experience"),
         ("general", "General"),
     )
 
